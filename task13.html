@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <title>instagram login page</title>
+    </head>
+    <body>
+        <h3>lpgin instagram account via username,email or mobile number</h3>
+        <div class="login">
+            
+            <form  onsubmit="return validate()">
+                  <input type="text" id="username" placeholder="username" ><br>
+                  <input type="number" id="mobile" placeholder="Mobile number" ><br>
+                  <input type="text" id="email" placeholder="email(gmail.com)" ><br>
+                  <input type="password" id="password" placeholder="Password" required><br>
+            
+                 <button type="submit">login</button>
+
+           </form>
+    </div>
+        <script>
+            function validate()
+            {
+                const email=document.getElementById("email");
+                var name=document.getElementById("username");
+                const mobile=document.getElementById("mobile");
+                var password=document.getElementById("password");
+                var emailpatt=/^[a-zA-Z0-9._]+@gmail\.com$/;
+                const mobilepatt=/^\d{10}$/;
+                var namepatt=/^[a-zA-Z._]+$/;
+                var passpatt=/^(?=.[a-z])(?=.[A-Z])(?=.\d)(?=.[@#$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+                if(email.value && !emailpatt.test(email.value))
+                {
+                document.write("invalid email.Must end with @gmail.com");
+                return false;
+                }
+                if(name.value && !namepatt.test(name.value))
+                {
+                    document.write("invalid username username doesnot contain spaces and digits");
+                    return false;
+                }
+                if(mobile.value && !mobilepatt.test(mobile.value))
+                {
+                    document.write("mobile numbers must be 10 digits");
+                    return false;
+                }
+                if(!passpatt.test(password.value))
+                {
+                    document.write("passwrod must be atleast 8 characters long and include atleast one uppercase letter ,one lower case letter,one digit and one special character");
+                    return false;
+                }
+                document.write("sucessfully login into your account");
+            }
+           
+
+        </script>
+    </body>
+</html>

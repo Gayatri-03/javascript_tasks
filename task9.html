@@ -1,0 +1,89 @@
+<html>
+    <head>
+        <title>calculator task</title>
+        <style>
+            body{
+                border-left: 30px;
+                text-align: center;
+                background-color: aquamarine;
+            }
+        </style>
+    </head>
+    <body>
+        <label for="a">number1</label>
+        <input type="number" id="a" required><br>
+        <label for="b">number2</label>
+        <input type="number" id="b" required><br>
+        <label for="select">select operation</label>
+        <select id="select">
+            <option value="none">none</option>
+            <option value="addition">addition</option>
+            <option value="subtraction">subtraction</option>
+            <option value="multiplication">multiplication</option>
+            <option value="division">division</option>
+            <option value="modulodivision">modulodivision</option>
+        </select><br>
+        <button onclick="calculator()">getresult</button><br>
+        <div id="result"></div>
+        <script>
+            function calculator()
+            {
+            let a=parseInt(document.getElementById("a").value);
+            let b=parseInt(document.getElementById("b").value);
+            let calc=document.getElementById("select").value;
+            let result;
+            switch(calc)
+            {
+                case "addition":
+                     result=addition(a,b);
+                    break;
+                case "subtraction":
+                    result= subtraction(a,b);
+                    break;
+                case "multiplication":
+                     result=multiplication(a,b);
+                    break;
+                case "division":
+                    result=division(a,b);
+                    break;
+                case "modulodivision":
+                    result= modulodivision(a,b);
+                    break;
+                default:
+                    result= "Invalid operation";
+                   
+            }
+            document.getElementById("result").innerText=result;
+        }
+
+
+            function addition(a,b)
+            {
+                return "addition of 2 numbers is "+(a+b);
+            }
+            function subtraction(a,b)
+            {
+                return "subtraction of 2 numbers is "+(a-b);
+            }
+            function multiplication(a,b)
+            {
+                return "multiplication of 2 numbers is "+(a*b);
+            }
+            function division(a,b)
+            {
+                if(b==0)
+                 {
+                   return "devision with zero is not possible";
+                
+                  }
+                else{
+                 return "division of 2 numbers is "+(a/b);
+                }
+            }
+            function modulodivision(a,b)
+            {
+                return "modulo division of 2 numbers is "+(a%b);
+            }
+        </script>
+    </body>
+</html>

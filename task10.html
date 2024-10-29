@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>sorting the array elements</title>
+    </head>
+    <body>
+        <script>
+            let n=parseInt(prompt("enter the number of elements you want"));
+            const arr=[];
+            for(let  i=0;i<n;i++)
+        {
+           
+            let ele=prompt("enter the element");
+            arr.push(ele);
+        }
+        const elems=arr.sort();
+        document.write("elements of array is:"+elems+"<br>");
+        let res=[];
+        for(let j=elems.length;j>=0;j--)
+        {
+             res.push(elems[j]);
+        }
+       
+        
+       document.write("elements of array in descending order is: ["+res+"]");
+        </script>
+    </body>
+</html>

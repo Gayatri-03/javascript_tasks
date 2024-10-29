@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>Scholorship details</title>
+        <style>
+            body{
+                text-align: center;
+                border-left: 20px;
+                border-width: 3px;
+            }
+        </style>
+    </head>
+    <body>
+        <label for="name">Student Name</label>
+        <input type="text" id="name" required><br>
+        <label for="num">Roll Number</label>
+        <input type="number" id="num" required><br>
+        <label for="gpa">  GPA  </label>
+        <input type="number" id="gpa" required><br>
+        <button onclick="check()">check</button>
+        <script>
+            function check()
+            {
+                let name=document.getElementById("name").value;
+                let roll=document.getElementById("num").value;
+                let gpa=parseFloat(document.getElementById("gpa").value);
+                if(gpa<7.5)
+                {
+                    document.write(name+" not eligile for scholorship");
+  
+                }
+                else{
+                    document.write(name+" eligilbel for scholorship")
+                }
+            
+        
+            }
+        </script>
+    </body>
+</html>

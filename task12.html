@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>languages</title>
+    </head>
+    <body>
+        <label for="selection">select language</label>
+        <select id="lang">
+            <option value="none">none</option>
+            <option value="hindi">hindi</option>
+            <option value="english">english</option>
+            <option value="telugu">telugu</option>
+            <option value="french">french</option>
+            <option value="dutch">dutch</option>
+        </select><br>
+        <button onclick="language()">submit</button>
+        <script>
+            function language()
+            {
+                let option=document.getElementById("lang").value;
+                switch(option)
+                 {
+                    case "hindi":
+                        document.write("नमस्ते, गूगल अनुवाद में आपका स्वागत है");
+                         break;
+                    case "english":
+                        document.write("hi,welcome to google translation");
+                        break;
+                    case "telugu":
+                         document.write("హాయ్, గూగుల్ అనువాదంలో మీకు స్వాగతం");    
+                         break;
+                    case "french":
+                        document.write("Bonjour, bienvenue sur Google Traduction");
+                        break;
+                    case "dutuch": 
+                           document.write(" Hallo, welkom bij Google Vertalen");
+                        break;
+                    default:
+                          document.write("invalid language");
+                          break; 
+                 }
+
+            }
+        </script>
+    </body>
+</html>

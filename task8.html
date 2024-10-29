@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>fibonacci in reverse order</title>
+    </head>
+    <body>
+        <script>
+            let  num=parseInt(prompt("enetr a number"));
+           let num1=0;
+            let num2=1;
+            let num3;
+            let arr=[0,1];
+            for(let i=0;i<num;i++)
+        {
+            
+            
+            num3=num1+num2;
+            arr.push(num3);
+            num1=num2;
+            num2=num3;
+          
+        }
+        for(let j=arr.length-1;j>=0;j--)
+        {
+            document.write(arr[j]+"<br>");
+        }
+        </script>
+    </body>
+</html>

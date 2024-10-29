@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>price calculation</title>
+    </head>
+    <body>
+        <form >
+            <label for="price">Actual price</label>
+            <input type="number" class="price" required><br>
+           
+            <button onclick="calculation()">Submit</button>
+        </form>
+        <script>
+            function calculation()
+            {
+                const price=parseFloat(document.getElementsByClassName("price")[0].value);
+                const discount=parseFloat((20/100)*price);
+                const cost=parseFloat(price-discount);
+                document.write("final cost of the item is "+cost);
+                console.log("code execution completed");
+            }
+           
+
+        </script>
+    </body>
+</html>

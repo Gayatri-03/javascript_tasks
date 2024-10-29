@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>eliminating duplicates elements of array elements</title>
+    </head>
+    <body>
+        <script>
+            let n=parseInt(prompt("enter the number of elements you want"));
+            const arr=[];
+            for(let  i=0;i<n;i++)
+        {
+           
+            let ele=prompt("enetr the element");
+            arr.push(ele);
+        }
+         let res=[...new Set(arr)];
+         document.write("elements of array :"+arr+"<br>");
+         document.write("elements of array after eleminating duplicates :"+res);
+        
+        
+        </script>
+    </body>
+</html>
