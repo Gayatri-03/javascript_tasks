@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>salary calculation</title>
+        <style>
+            body{
+                background-color: aquamarine;
+                text-decoration: double;
+                text-align: center;
+                padding: 30px 40px;
+                border-left: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            function calculate()
+            {
+                const month=document.getElementById("month").value;
+                 const deduction=document.getElementById("deduct").value;
+                 calculatesalary(month,deduction);
+
+            }
+              function calculatesalary(month,deduction)
+              {
+                 
+                 const sal=month-deduction;
+                 alert("your salary is  "+sal);
+                 console.log("worked well");
+              }
+        </script>
+        <form onsubmit="calculate()">
+            <label for="month">monthly salary</label>
+            <input type="number" id="month" value=25000 disabled><br>
+            <label for="deduct">deduction amount</label>
+            <input type="number" id="deduct" required><br>
+
+            <button type="submit">submit</button>
+        </form>
+           
+    </body>
+</html>

@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>validation of login details</title>
+    </head>
+    <body>
+        <h3>login form</h3>
+        <form onsubmit="event.preventDefault();loginvalidatation();">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required><br>
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required><br>
+            <button type="submit">login</button>
+        </form>
+        <script>
+         function loginvalidatation()
+       {
+            const un=document.getElementById("username").value;
+            const Pass=document.getElementById("password").value;
+            if(un=="Admin" && Pass=="Admin@123" )
+            {
+             alert("login success");
+            }
+           else
+             {
+            alert("incorrect username or password");
+             }
+       }
+        </script>
+    </body>
+</html>
